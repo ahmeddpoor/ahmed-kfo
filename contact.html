@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>اتصل بنا | سعد فهد الدوسري - KFO</title>
+  
+  <!-- خط Tajawal -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { 
+      font-family: 'Tajawal', sans-serif; 
+      background:#f8f9fa; 
+      color:#333; 
+      line-height:1.6; 
+      direction:rtl; 
+    }
+
+    header {
+      background: linear-gradient(135deg, #006400 0%, #27ae60 100%);
+      color:white;
+      padding:1rem 5%;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .header-container {
+      max-width:1400px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:1rem;
+    }
+
+    .logo { font-size:1.9rem; font-weight:bold; color:white; text-decoration:none; }
+    .logo span { color:rgba(255,255,255,0.85); font-size:1.4rem; }
+
+    nav ul { display:flex; list-style:none; gap:2.2rem; }
+    nav a { color:white; text-decoration:none; font-weight:500; transition:0.3s; }
+    nav a:hover { color:#e0ffe0; transform:translateY(-2px); }
+
+    .btn-quote {
+      background:white;
+      color:#006400;
+      padding:0.8rem 1.6rem;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:all 0.3s;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+    .btn-quote:hover { background:#e0ffe0; transform:translateY(-3px); box-shadow:0 6px 15px rgba(0,0,0,0.25); }
+
+    .contact-hero {
+      background: linear-gradient(135deg, #006400 0%, #27ae60 100%);
+      color:white;
+      text-align:center;
+      padding:5rem 5% 4rem;
+    }
+
+    .contact-hero h1 { font-size:2.8rem; margin-bottom:1rem; }
+
+    .contact-section {
+      padding:4rem 5%;
+      max-width:1400px;
+      margin:0 auto;
+    }
+
+    .contact-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+      gap:2.5rem;
+    }
+
+    .contact-card {
+      background:white;
+      border-radius:12px;
+      box-shadow:0 8px 25px rgba(0,0,0,0.12);
+      padding:2.5rem;
+      text-align:center;
+      transition:transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-card:hover {
+      transform:translateY(-10px);
+      box-shadow:0 15px 35px rgba(0,100,0,0.2);
+    }
+
+    .contact-icon {
+      font-size:4rem;
+      color:#27ae60;
+      margin-bottom:1.2rem;
+    }
+
+    .contact-info h3 {
+      color:#006400;
+      margin-bottom:1rem;
+      font-size:1.5rem;
+    }
+
+    .contact-info p {
+      font-size:1.2rem;
+      margin:0.5rem 0;
+    }
+
+    .contact-info a {
+      color:#27ae60;
+      font-size:1.4rem;
+      font-weight:bold;
+      text-decoration:none;
+      display:inline-block;
+      margin-top:0.8rem;
+    }
+
+    .contact-info a:hover {
+      text-decoration:underline;
+    }
+
+    footer {
+      background:#006400;
+      color:white;
+      padding:3rem 5% 2rem;
+      text-align:center;
+    }
+
+    .copyright {
+      margin-bottom:1.8rem;
+      font-size:1.1rem;
+      opacity:0.9;
+    }
+
+    .social-icons {
+      display:flex;
+      justify-content:center;
+      gap:1.8rem;
+      flex-wrap:wrap;
+    }
+
+    .social-link {
+      width:52px;
+      height:52px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.8rem;
+      color:white;
+      background:rgba(255,255,255,0.15);
+      border-radius:50%;
+      border:2px solid rgba(255,255,255,0.3);
+      transition:all 0.3s ease;
+    }
+
+    .social-link:hover {
+      transform:translateY(-8px) scale(1.12);
+      background:white;
+      box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    @media (max-width:768px) {
+      .header-container { flex-direction:column; gap:1.5rem; }
+      nav ul { flex-direction:column; gap:1.2rem; text-align:center; }
+      .contact-hero h1 { font-size:2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">KFO <span>سعد فهد الدوسري</span></a>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="products.html">المنتجات</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+      
+      <a href="https://wa.me/966542003347" class="btn-quote" target="_blank">تواصل معنا</a>
+    </div>
+  </header>
+
+  <section class="contact-hero">
+    <h1>اتصل بنا</h1>
+    <p>فريقنا جاهز لخدمتك - تواصل معنا في أي وقت</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-grid">
+
+      <!-- واتساب / الجوال -->
+      <div class="contact-card">
+        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="contact-info">
+          <h3>واتساب / الجوال</h3>
+          <a href="https://wa.me/966542003347" target="_blank">+966 542 003 347</a>
+          <p>متاح 24/7 للاستفسارات والطلبات السريعة</p>
+        </div>
+      </div>
+
+      <!-- العنوان -->
+      <div class="contact-card">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="contact-info">
+          <h3>موقع المعرض</h3>
+          <p>الرياض - حي العليا</p>
+          <p>حراج الكمبيوتر - الطابق الثاني</p>
+          <p>معرض رقم ٣٣</p>
+        </div>
+      </div>
+
+      <!-- ساعات العمل (يمكنك تعديلها حسب الواقع) -->
+      <div class="contact-card">
+        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+        <div class="contact-info">
+          <h3>ساعات العمل</h3>
+          <p>السبت - الخميس: ٩:٠٠ ص - ١٠:٠٠ م</p>
+          <p>الجمعة: ٤:٠٠ م - ١٠:٠٠ م</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p class="copyright">© ٢٠٢٦ سعد فهد الدوسري - KFO | جميع الحقوق محفوظة | الرياض - المملكة العربية السعودية</p>
+      
+      <div class="social-icons">
+        <a href="https://wa.me/966542003347" target="_blank" class="social-link whatsapp" title="واتساب">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/kfo_sa" target="_blank" class="social-link instagram" title="إنستغرام">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com/kfo_sa" target="_blank" class="social-link x" title="إكس">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://snapchat.com/add/kfo_sa" target="_blank" class="social-link snapchat" title="سناب شات">
+          <i class="fab fa-snapchat"></i>
+        </a>
+        <a href="https://linkedin.com/company/kfo-sa" target="_blank" class="social-link linkedin" title="لينكدإن">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

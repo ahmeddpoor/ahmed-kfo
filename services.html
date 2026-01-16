@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>الخدمات | سعد فهد الدوسري - KFO</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+      direction: rtl;
+    }
+
+    header {
+      background: linear-gradient(135deg, #006400 0%, #27ae60 100%);
+      color: white;
+      padding: 1rem 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo { font-size: 1.9rem; font-weight: bold; color: white; text-decoration: none; }
+    .logo span { color: rgba(255,255,255,0.85); font-size: 1.4rem; }
+
+    nav ul { display: flex; list-style: none; gap: 2.2rem; margin: 0; padding: 0; }
+    nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+    nav a:hover { color: #e0ffe0; }
+
+    .btn-quote {
+      background: white;
+      color: #006400;
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+    }
+
+    .btn-quote:hover {
+      background: #e0ffe0;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #006400 0%, #27ae60 100%);
+      color: white;
+      text-align: center;
+      padding: 5rem 5% 4rem;
+    }
+
+    .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
+
+    .services-section {
+      padding: 4rem 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .services-section h2 {
+      text-align: center;
+      color: #006400;
+      margin-bottom: 3rem;
+      font-size: 2.4rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0,100,0,0.18);
+    }
+
+    .service-icon {
+      font-size: 4.5rem;
+      color: #27ae60;
+      margin: 2rem 0 1.5rem;
+    }
+
+    .service-content {
+      padding: 0 1.8rem 2.5rem;
+    }
+
+    .service-content h3 {
+      color: #006400;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .service-content p {
+      color: #555;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      background: #006400;
+      color: white;
+      padding: 3rem 5% 2rem;
+      text-align: center;
+    }
+
+    .copyright {
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      transform: translateY(-8px) scale(1.12);
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    @media (max-width: 768px) {
+      .header-container { flex-direction: column; gap: 1.5rem; }
+      nav ul { flex-direction: column; gap: 1.2rem; text-align: center; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">KFO <span>سعد فهد الدوسري</span></a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="products.html">المنتجات</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://wa.me/966xxxxxxxxx" class="btn-quote" target="_blank">طلب عرض سعر</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>خدماتنا المتكاملة</h1>
+    <p>نقدم لكم خدمات احترافية تغطي كل ما يخص احتياجاتكم المكتبية والتقنية بجودة عالية وسرعة وأمانة</p>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section">
+    <h2>خدماتنا الرئيسية</h2>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-tools"></i></div>
+        <div class="service-content">
+          <h3>صيانة وإصلاح الطابعات</h3>
+          <p>صيانة دورية وطارئة لجميع أنواع الطابعات مع قطع غيار أصلية وضمان على الإصلاح.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-truck-fast"></i></div>
+        <div class="service-content">
+          <h3>توصيل سريع في الرياض</h3>
+          <p>توصيل فوري أو خلال ساعات لكافة المنتجات والطلبات داخل الرياض مع خدمة التوصيل المجاني للطلبات الكبيرة.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="service-content">
+          <h3>خدمة ما بعد البيع</h3>
+          <p>دعم مستمر بعد الشراء، ضمان شامل، متابعة رضا العميل، وخدمة استبدال أو إصلاح سريعة.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-fill-drip"></i></div>
+        <div class="service-content">
+          <h3>تعبئة وتغيير الأحبار والتونر</h3>
+          <p>تعبئة احترافية للأحبار الأصلية والمتوافقة مع فحص كامل للجهاز لضمان الأداء الأمثل.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-headset"></i></div>
+        <div class="service-content">
+          <h3>دعم فني في الموقع وعن بعد</h3>
+          <p>مساعدة فورية عبر الهاتف/الواتساب، أو زيارة فني متخصص إلى موقعكم في الرياض.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+        <div class="service-content">
+          <h3>عقود صيانة سنوية</h3>
+          <p>عقود صيانة دورية بأسعار مميزة للشركات والمؤسسات مع أولوية في الخدمة.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+        <div class="service-content">
+          <h3>استشارات تقنية مجانية</h3>
+          <p>استشارة مجانية لاختيار أفضل الحلول التقنية والمكتبية المناسبة لاحتياجات عملكم.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p class="copyright">© ٢٠٢٦ سعد فهد الدوسري - KFO | جميع الحقوق محفوظة | الرياض - المملكة العربية السعودية</p>
+
+      <div class="social-icons">
+        <a href="https://wa.me/966xxxxxxxxx" target="_blank" class="social-link whatsapp" title="واتساب">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/kfo_sa" target="_blank" class="social-link instagram" title="إنستغرام">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com/kfo_sa" target="_blank" class="social-link x" title="إكس">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://snapchat.com/add/kfo_sa" target="_blank" class="social-link snapchat" title="سناب شات">
+          <i class="fab fa-snapchat"></i>
+        </a>
+        <a href="https://linkedin.com/company/kfo-sa" target="_blank" class="social-link linkedin" title="لينكدإن">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

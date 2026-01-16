@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>سعد فهد الدوسري - KFO | توريد طابعات وأحبار ولابتوبات وقرطاسية</title>
+  
+  <!-- خط Tajawal العربي الجميل -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Tajawal', 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+      direction: rtl;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #006400 0%, #27ae60 100%);
+      color: white;
+      padding: 1rem 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    .logo span {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.4rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2.2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #e0ffe0;
+      transform: translateY(-2px);
+    }
+
+    .btn-quote {
+      background-color: white;
+      color: #006400;
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .btn-quote:hover {
+      background-color: #e0ffe0;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    /* Hero */
+    .hero {
+      background-color: white;
+      padding: 5rem 5% 4rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: #006400;
+      margin-bottom: 1.2rem;
+      font-size: 2.8rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+    }
+
+    /* Products */
+    .products {
+      padding: 4rem 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .products h2 {
+      text-align: center;
+      color: #006400;
+      margin-bottom: 3rem;
+      font-size: 2.4rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 15px 35px rgba(0,100,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      color: #006400;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #006400;
+      color: white;
+      padding: 3rem 5% 2rem;
+    }
+
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .copyright {
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      font-size: 1.8rem;
+      color: white;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .social-link:hover {
+      transform: translateY(-8px) scale(1.12);
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .social-link.whatsapp:hover { color: #25D366; }
+    .social-link.instagram:hover { color: #E1306C; }
+    .social-link.x:hover { color: #000; }
+    .social-link.snapchat:hover { color: #FFFC00; }
+    .social-link.linkedin:hover { color: #0A66C2; }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        gap: 1.2rem;
+        text-align: center;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">KFO <span>سعد فهد الدوسري</span></a>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="products.html">المنتجات</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+      
+      <a href="https://wa.me/966xxxxxxxxx" class="btn-quote" target="_blank">طلب عرض سعر</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>توريد جميع مستلزمات المكاتب والشركات</h1>
+    <p>طابعات أصلية ومتعددة الوظائف • أحبار أصلية ومتوافقة • لابتوبات وأجهزة كمبيوتر • أجهزة مكتبية • قرطاسية بجودة عالية وأسعار تنافسية في الرياض</p>
+  </section>
+
+  <section class="products">
+    <h2>منتجاتنا الرئيسية</h2>
+    
+    <div class="grid">
+      <div class="card">
+        <img src="https://webobjects2.cdw.com/is/image/CDW/7763524?\( product-main \)" alt="طابعة HP متعددة الوظائف">
+        <h3>طابعات متعددة الوظائف</h3>
+        <p>HP, Canon, Epson – طباعة، سكان، نسخ</p>
+      </div>
+      
+      <div class="card">
+        <img src="https://i.ebayimg.com/images/g/gLgAAOSwWJxl-LZf/s-l1200.jpg" alt="أحبار HP">
+        <h3>أحبار وتونر</h3>
+        <p>أصلية ومتوافقة عالية السعة بضمان</p>
+      </div>
+      
+      <div class="card">
+        <img src="https://cdn.mos.cms.futurecdn.net/aRqrKa2LgngSTgHSysC5BR.jpg" alt="لابتوب أعمال">
+        <h3>لابتوبات الأعمال</h3>
+        <p>HP, Dell, Lenovo – جديد ومستعمل مضمون</p>
+      </div>
+      
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/51CCqB3fH8L.jpg" alt="قرطاسية مكتبية">
+        <h3>قرطاسية ومستلزمات مكتب</h3>
+        <p>كل ما تحتاجه مكتبك بأسعار مميزة</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p class="copyright">© ٢٠٢٦ سعد فهد الدوسري - KFO | جميع الحقوق محفوظة | الرياض - المملكة العربية السعودية</p>
+      
+      <div class="social-icons">
+        <a href="https://wa.me/966xxxxxxxxx" target="_blank" class="social-link whatsapp" title="واتساب">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="https://instagram.com/kfo_sa" target="_blank" class="social-link instagram" title="إنستغرام">
+          <i class="fab fa-instagram"></i>
+        </a>
+        
+        <a href="https://x.com/kfo_sa" target="_blank" class="social-link x" title="إكس (تويتر)">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        
+        <a href="https://snapchat.com/add/kfo_sa" target="_blank" class="social-link snapchat" title="سناب شات">
+          <i class="fab fa-snapchat"></i>
+        </a>
+        
+        <a href="https://linkedin.com/company/kfo-sa" target="_blank" class="social-link linkedin" title="لينكدإن">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

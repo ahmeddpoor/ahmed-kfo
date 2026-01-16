@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>المنتجات | سعد فهد الدوسري - KFO</title>
+  
+  <!-- خط Tajawal العربي الجميل -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Tajawal', 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+      direction: rtl;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #006400 0%, #27ae60 100%);
+      color: white;
+      padding: 1rem 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .header-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.9rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    .logo span {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.4rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2.2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #e0ffe0;
+      transform: translateY(-2px);
+    }
+
+    .btn-quote {
+      background-color: white;
+      color: #006400;
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .btn-quote:hover {
+      background-color: #e0ffe0;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    /* Products Hero */
+    .products-hero {
+      background: linear-gradient(135deg, #006400 0%, #27ae60 100%);
+      color: white;
+      text-align: center;
+      padding: 5rem 5% 4rem;
+    }
+
+    .products-hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .products-hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    /* Products Section */
+    .products-section {
+      padding: 4rem 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .products-section h2 {
+      text-align: center;
+      color: #006400;
+      margin-bottom: 3rem;
+      font-size: 2.4rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0,100,0,0.18);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: contain;
+      padding: 1.5rem;
+      background: #f9fff9;
+    }
+
+    .product-info {
+      padding: 1.5rem 1.5rem 2rem;
+    }
+
+    .product-info h3 {
+      color: #006400;
+      margin-bottom: 0.8rem;
+      font-size: 1.4rem;
+    }
+
+    .product-info p {
+      color: #555;
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    .price-tag {
+      background: #27ae60;
+      color: white;
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #006400;
+      color: white;
+      padding: 3rem 5% 2rem;
+    }
+
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .copyright {
+      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      font-size: 1.8rem;
+      color: white;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    .social-link:hover {
+      transform: translateY(-8px) scale(1.12);
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    .social-link.whatsapp:hover { color: #25D366; }
+    .social-link.instagram:hover { color: #E1306C; }
+    .social-link.x:hover { color: #000; }
+    .social-link.snapchat:hover { color: #FFFC00; }
+    .social-link.linkedin:hover { color: #0A66C2; }
+
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        gap: 1.2rem;
+        text-align: center;
+      }
+      
+      .products-hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .product-card img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">KFO <span>سعد فهد الدوسري</span></a>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="products.html">المنتجات</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+      
+      <a href="https://wa.me/966xxxxxxxxx" class="btn-quote" target="_blank">طلب عرض سعر</a>
+    </div>
+  </header>
+
+  <section class="products-hero">
+    <h1>منتجاتنا المميزة</h1>
+    <p>نقدم أحدث الطابعات، الأحبار الأصلية والمتوافقة، اللابتوبات، الأجهزة المكتبية، والقرطاسية بجودة مضمونة وأسعار تنافسية في الرياض</p>
+  </section>
+
+  <section class="products-section">
+    <div class="grid">
+      <!-- طابعات (القديمة + جديدة) -->
+      <div class="product-card">
+        <img src="https://webobjects2.cdw.com/is/image/CDW/7763524?\( product-main \)" alt="HP OfficeJet Pro 9125e">
+        <div class="product-info">
+          <h3>HP OfficeJet Pro 9125e</h3>
+          <p>طابعة متعددة الوظائف: طباعة، مسح ضوئي، نسخ، فاكس. مثالية للمكاتب الصغيرة والمتوسطة مع دعم للطباعة عن بعد.</p>
+          <div class="price-tag">من ١٤٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://hp.widen.net/content/m4mtunyrj1/webp/m4mtunyrj1.png?w=573&h=430&dpi=72&color=ffffff00" alt="HP LaserJet Enterprise M507dn">
+        <div class="product-info">
+          <h3>HP LaserJet Enterprise M507dn</h3>
+          <p>طابعة ليزر أحادية اللون عالية السرعة (٤٥ صفحة في الدقيقة) مع طباعة مزدوجة الجانبين، مناسبة للشركات الكبيرة.</p>
+          <div class="price-tag">من ٢٤٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71K3w6S4CQL.jpg" alt="Epson EcoTank ET-2850">
+        <div class="product-info">
+          <h3>Epson EcoTank ET-2850</h3>
+          <p>طابعة نفث حبر مع خزانات حبر كبيرة، توفر آلاف الصفحات دون تغيير الخراطيش، مثالية للاستخدام المنزلي والمكتبي.</p>
+          <div class="price-tag">من ١٢٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61v7W0B8B7L.jpg" alt="Brother MFC-L2710DW">
+        <div class="product-info">
+          <h3>Brother MFC-L2710DW</h3>
+          <p>طابعة ليزر متعددة الوظائف مع اتصال لاسلكي، طباعة مزدوجة، وسرعة عالية للأعمال اليومية.</p>
+          <div class="price-tag">من ١٨٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <!-- أحبار (القديمة + جديدة) -->
+      <div class="product-card">
+        <img src="https://i.ebayimg.com/images/g/gLgAAOSwWJxl-LZf/s-l1200.jpg" alt="HP 32XL Ink Bottles">
+        <div class="product-info">
+          <h3>HP 32XL + 31 Ink Bottles</h3>
+          <p>زجاجات حبر أصلية عالية السعة (أسود، ألوان) تدوم لآلاف الصفحات مع ضمان الجودة والتوافق الكامل.</p>
+          <div class="price-tag">من ٢٤٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61jBe8Vg1PL.jpg" alt="Canon CLI-42 Ink Cartridges">
+        <div class="product-info">
+          <h3>Canon CLI-42 Ink Cartridges</h3>
+          <p>خراطيش حبر ألوان أصلية للطابعات كانون، توفر ألوان حية ودقة عالية للصور والوثائق.</p>
+          <div class="price-tag">من ٣٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71Z9Z9Z9Z9L.jpg" alt="Epson T502 EcoTank Ink Bottles">
+        <div class="product-info">
+          <h3>Epson T502 EcoTank Ink Bottles</h3>
+          <p>زجاجات حبر إبسون إيكوتانك أصلية، سعة كبيرة للطباعة الاقتصادية دون فوضى.</p>
+          <div class="price-tag">من ١٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61v7W0B8B7L.jpg" alt="Brother TN-760 Toner">
+        <div class="product-info">
+          <h3>Brother TN-760 Toner</h3>
+          <p>تونر أسود أصلي لطابعات بروذر ليزر، يدعم طباعة حتى ٣٠٠٠ صفحة بجودة احترافية.</p>
+          <div class="price-tag">من ٢٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <!-- لابتوبات (القديمة + جديدة) -->
+      <div class="product-card">
+        <img src="https://cdn.mos.cms.futurecdn.net/aRqrKa2LgngSTgHSysC5BR.jpg" alt="Dell Latitude 7440 Business Laptop">
+        <div class="product-info">
+          <h3>Dell Latitude 7440</h3>
+          <p>لابتوب أعمال قوي مع معالج Intel Core i7، 16GB RAM، SSD 512GB، شاشة 14 إنش FHD، مثالي للعمل اليومي.</p>
+          <div class="price-tag">من ٤٩٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTJV3?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1694014871985" alt="Apple MacBook Air M2">
+        <div class="product-info">
+          <h3>Apple MacBook Air M2</h3>
+          <p>لابتوب خفيف وسريع مع شريحة M2، 8GB RAM، SSD 256GB، شاشة Retina 13.6 إنش، مثالي للإبداع والأعمال.</p>
+          <div class="price-tag">من ٤٢٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71K7B2wL4rL.jpg" alt="Lenovo ThinkPad X1 Carbon">
+        <div class="product-info">
+          <h3>Lenovo ThinkPad X1 Carbon</h3>
+          <p>لابتوب أعمال فائق الخفة مع Intel Core i7، 16GB RAM، SSD 1TB، شاشة 14 إنش WQXGA، مقاوم للصدمات.</p>
+          <div class="price-tag">من ٥٩٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81Y0u5U99ZL.jpg" alt="HP Pavilion x360">
+        <div class="product-info">
+          <h3>HP Pavilion x360</h3>
+          <p>لابتوب قابل للطي 360 درجة مع Intel Core i5، 8GB RAM، SSD 256GB، شاشة لمس 14 إنش، متعدد الاستخدامات.</p>
+          <div class="price-tag">من ٢٩٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <!-- أجهزة مكتبية وقرطاسية (القديمة + جديدة) -->
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71Y7c2Yv1yL.jpg" alt="Epson Perfection V600 Scanner">
+        <div class="product-info">
+          <h3>Epson Perfection V600 Scanner</h3>
+          <p>ماسح ضوئي عالي الدقة (6400 dpi) للصور والوثائق، مع دعم للأفلام والسلايدز.</p>
+          <div class="price-tag">من ١٢٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/51CCqB3fH8L.jpg" alt="Office Stationery Set">
+        <div class="product-info">
+          <h3>مجموعة قرطاسية مكتبية كاملة</h3>
+          <p>دفاتر، أقلام، ملفات، منظمات، ومستلزمات أخرى لتنظيم مكتبك بكفاءة عالية.</p>
+          <div class="price-tag">من ١٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61Y7c2Yv1yL.jpg" alt="Fellowes Powershred 79Ci Shredder">
+        <div class="product-info">
+          <h3>Fellowes Powershred 79Ci Shredder</h3>
+          <p>ماكينة تمزيق ورق آمنة وصامتة، تتعامل مع 16 ورقة في الوقت الواحد، مع حماية من الانسداد.</p>
+          <div class="price-tag">من ٨٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71K3w6S4CQL.jpg" alt="Staples Arc Notebook System">
+        <div class="product-info">
+          <h3>Staples Arc Notebook System</h3>
+          <p>نظام دفاتر قابل للتخصيص مع أوراق قابلة للإزالة والترتيب، مثالي للاجتماعات والتخطيط.</p>
+          <div class="price-tag">من ١٤٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61v7W0B8B7L.jpg" alt="Logitech MK270 Wireless Keyboard and Mouse">
+        <div class="product-info">
+          <h3>Logitech MK270 Wireless Keyboard and Mouse</h3>
+          <p>كيبورد وماوس لاسلكيين مع بطارية طويلة العمر، مثاليين للأجهزة المكتبية.</p>
+          <div class="price-tag">من ١٩٩ ر.س</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/81Y0u5U99ZL.jpg" alt="Post-it Super Sticky Notes">
+        <div class="product-info">
+          <h3>Post-it Super Sticky Notes</h3>
+          <p>ورق ملاحظات لاصقة قوية الالتصاق، متوفرة بألوان متعددة للتنظيم والتذكيرات.</p>
+          <div class="price-tag">من ٤٩ ر.س</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p class="copyright">© ٢٠٢٦ سعد فهد الدوسري - KFO | جميع الحقوق محفوظة | الرياض - المملكة العربية السعودية</p>
+      
+      <div class="social-icons">
+        <a href="https://wa.me/966xxxxxxxxx" target="_blank" class="social-link whatsapp" title="واتساب">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a href="https://instagram.com/kfo_sa" target="_blank" class="social-link instagram" title="إنستغرام">
+          <i class="fab fa-instagram"></i>
+        </a>
+        
+        <a href="https://x.com/kfo_sa" target="_blank" class="social-link x" title="إكس (تويتر)">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+        
+        <a href="https://snapchat.com/add/kfo_sa" target="_blank" class="social-link snapchat" title="سناب شات">
+          <i class="fab fa-snapchat"></i>
+        </a>
+        
+        <a href="https://linkedin.com/company/kfo-sa" target="_blank" class="social-link linkedin" title="لينكدإن">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
